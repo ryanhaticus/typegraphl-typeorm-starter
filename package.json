@@ -1,14 +1,13 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "index.js",
+  "module": "true",
   "license": "MIT",
   "scripts": {
     "start": "ts-node ./src/index.ts",
     "dev": "ts-node-dev ./src/index.ts",
     "build": "tsc ./src/index.ts",
-    "dangerousstart": "ts-node ./build/index.js",
-    "dockerize": "docker-compose up"
+    "dangerousstart": "node ./build/index.js"
   },
   "dependencies": {
     "apollo-server-express": "^2.19.2",
